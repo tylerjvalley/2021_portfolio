@@ -1,0 +1,12 @@
+@import '../../../styles.scss';
+
+nav {
+    background: $teal;
+
+    .navbar-toggler-icon {
+        background-image: url("/assets/img/navigation/icon-menu.svg");
+        height: 20px;
+        width: 20px;
+        margin-left: 15px;
+    }
+}
