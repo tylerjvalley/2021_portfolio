@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
+html, body {
+    position: relative;
+}
 
 //page colors 
-
 $navy: #25274D;
 $purple: #464866;
 $off-white: #AAABB8;
