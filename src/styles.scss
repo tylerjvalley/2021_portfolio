@@ -3,21 +3,33 @@ html, body {
     position: relative;
 }
 
-//page colors 
-$navy: #25274D;
-$purple: #464866;
-$off-white: #AAABB8;
-$cyan: #2E9CCA;
-$teal: #29648A;
+//variables 
+$black: #0B0C10;
+$dark-grey: #1F2833;
+$light-grey: #C5C6C7;
+$cyan: #66FCF1;
+$teal: #45A29E;
+$white: #FFFFFF;
 
 
-//text-colors 
-$text-white: #FFFFFF;
-$text-black: #000000;
+//background-colors
+.background-black {
+    background: $black;
+}
+.background-transparent {
+    background: transparent;
+}
 
+//text-colors
+.text-cyan {
+    color: $cyan;
+}
+
+.text-white {
+    color: $white;
+}
 
 //fonts
-
 h1, h3 {
     font-family: 'Libre BaskerVille', serif;
     font-size: 100px;

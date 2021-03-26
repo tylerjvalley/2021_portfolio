@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 .home-page {
-    background: $navy;
+    background: $black;
 
     .information {
         margin-top: 100px;
@@ -14,26 +14,31 @@
         }
     }
 
-    .cards {
-        .card {
+    .projects {
+        .project {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             background-color: transparent;
-            .card-title {
-                background-color: $teal;
-                border-radius: 8px;
-            }
+            border-radius: 10%;
+           
         }
-        .projects-card {
+        .earnbet {
             background-image: url('../../../assets/img/home/earnbet.png');
         }
-        .about-card {
-            background-image: url('../../../assets/img/home/pexels-luis-gomes-546819.jpg');
+        .bethehouse {
+            background-image: url('../../../assets/img/home/bethehouse.png');
         }
-        .contact-card {
-            background-image: url('../../../assets/img/home/pexels-tyler-lastovich-699122.jpg');
+        .stacker {
+            background-image: url('../../../assets/img/home/stacker.png');
         }
+    }
+
+    .see-more {
+        background: transparent;
+        border-radius: 8px;
+        border-color: $cyan;
+        color: $white;
     }
 
    
