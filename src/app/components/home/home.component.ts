@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'home',
@@ -9,13 +10,21 @@ export class HomeComponent implements OnInit {
 
   modalActivated:boolean = false;
 
-  constructor() { }
+  constructor(
+    private readonly modal: ModalService
+    ) {
+
+     }
 
   ngOnInit(): void {
   }
 
-  showModal(): void {   
+  showModal(type:string): void {   
+
    this.modalActivated = true;
-}
+
+   this.modal.selectModal(type);
+
+  }
 
 }

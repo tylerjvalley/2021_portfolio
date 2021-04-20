@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'modal',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   
+  title:string;
+  information:string;
 
-  constructor() { }
+  constructor(modal: ModalService) {
+    this.title = modal.modalType;
+    this.information = modal.modalInfo;
+   }
 
   ngOnInit(): void {
     const projectModal:HTMLElement = document.getElementById('projectModal');
@@ -16,6 +22,7 @@ export class ModalComponent implements OnInit {
     projectModal.addEventListener('shown.bs.modal', function () {
     myInput.focus()
     })
+
   }
 
 
