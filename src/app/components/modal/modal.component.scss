@@ -1,0 +1,21 @@
+@import '../../../styles.scss';
+
+.modal {
+    top: 20%;
+    h3, p {
+        color: $white;
+    }
+    .modal-content {
+        background: $black;
+        border: 1px solid $cyan;
+        border-radius: 8px;
+
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+    }
+}

@@ -10,10 +10,14 @@ export class ModalComponent implements OnInit {
   
   title:string;
   information:string;
+  repo:string;
+  link:string;
 
   constructor(modal: ModalService) {
     this.title = modal.modalType;
     this.information = modal.modalInfo;
+    this.repo = modal.modalRepo;
+    this.link = modal.modalLink;
    }
 
   ngOnInit(): void {
