@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  modalActivated:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  showModal(): void {   
+   this.modalActivated = true;
+}
 
 }
