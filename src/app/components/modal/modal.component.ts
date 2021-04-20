@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'modal',
@@ -12,12 +13,17 @@ export class ModalComponent implements OnInit {
   information:string;
   repo:string;
   link:string;
+  gif:SafeHtml;
 
-  constructor(modal: ModalService) {
+  constructor(
+    modal: ModalService,
+    private sanitizer: DomSanitizer
+    ) {
     this.title = modal.modalType;
     this.information = modal.modalInfo;
     this.repo = modal.modalRepo;
     this.link = modal.modalLink;
+    this.gif = this.sanitizer.bypassSecurityTrustHtml(modal.modalGif);
    }
 
   ngOnInit(): void {

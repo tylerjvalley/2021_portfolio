@@ -7,8 +7,10 @@
         </div>
         <div class="modal-body">
           <p>{{information}}</p>
+          <div id="gif" [innerHtml]="gif"></div>
         </div>
         <div class="modal-footer">
+          <a href=""><button type="button" class="btn btn-light">More Info</button></a>
           <a href="{{link}}" target="_blank"><button type="button" class="btn btn-success">Link to Project</button></a>
           <a href="{{repo}}" target="_blank"><button type="button" class="btn btn-primary">Repository</button></a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
