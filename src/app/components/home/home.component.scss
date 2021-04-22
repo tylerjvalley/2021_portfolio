@@ -42,5 +42,18 @@
         color: $white;
     }
 
+    .about-paragraph {
+        width: 100%;
+
+        @media (min-width: 900px) {
+            width: 500px;
+        }
+
+        p {
+            line-height: 30px;
+            font-size: 20px;
+        }
+    }
+
    
 }
