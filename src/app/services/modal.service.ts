@@ -31,7 +31,7 @@ export class ModalService {
       this.modalRepo = 'https://gitlab.com/bethehouse/front-end/bth-angular';
       this.modalLink = 'https://bethehouse.casino/';
       this.modalGif =  '<iframe src="https://giphy.com/embed/5nLxkZhslpVJlzH3O3" width="100%" height="262" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>';
-    } else if (modal === 'Stacker') {
+    } else if (modal === 'Stacker Ventures') {
       this.modalInfo = 'Stacker Ventures is a venture capital project that funds different web3 projects from different developers. Allows users to invest in projects via STACK tokens';
       this.modalRepo = 'https://gitlab.com/stackerventures/front-end/angular';
       this.modalLink = 'https://stacker.vc/';

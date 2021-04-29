@@ -3,7 +3,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">{{title}}</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p>{{information}}</p>
@@ -13,7 +12,7 @@
           <a href=""><button type="button" class="btn btn-light">More Info</button></a>
           <a href="{{link}}" target="_blank"><button type="button" class="btn btn-success">Link to Project</button></a>
           <a href="{{repo}}" target="_blank"><button type="button" class="btn btn-primary">Repository</button></a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="refreshModal()">Close</button>
         </div>
       </div>
     </div>

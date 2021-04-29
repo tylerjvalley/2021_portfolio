@@ -1,7 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-    position: relative;
-}
 
 //variables 
 $black: #0B0C10;
@@ -10,6 +7,12 @@ $light-grey: #C5C6C7;
 $cyan: #66FCF1;
 $teal: #45A29E;
 $white: #FFFFFF;
+
+html, body {
+    position: relative;
+    background: $black !important;
+}
+
 
 
 //background-colors
@@ -20,6 +23,10 @@ $white: #FFFFFF;
     background: transparent;
 }
 
+.background-light-grey {
+    background: $light-grey;
+}
+
 //text-colors
 .text-cyan {
     color: $cyan;
@@ -27,6 +34,18 @@ $white: #FFFFFF;
 
 .text-white {
     color: $white;
+}
+
+.text-teal {
+    color: $teal;
+}
+
+.text-dark-grey {
+    color: $dark-grey;
+}
+
+.text-light-grey {
+    color: $light-grey;
 }
 
 //fonts

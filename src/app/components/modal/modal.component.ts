@@ -23,19 +23,22 @@ export class ModalComponent implements OnInit {
     this.information = modal.modalInfo;
     this.repo = modal.modalRepo;
     this.link = modal.modalLink;
-    this.gif = this.sanitizer.bypassSecurityTrustHtml(modal.modalGif);
+    this.gif = sanitizer.bypassSecurityTrustHtml(modal.modalGif);
    }
 
   ngOnInit(): void {
+    
     const projectModal:HTMLElement = document.getElementById('projectModal');
     const myInput = document.getElementById('myInput');
-    projectModal.addEventListener('shown.bs.modal', function () {
-    myInput.focus()
+
+    projectModal.addEventListener('shown.bs.modal', function (e) {
+      myInput.focus();     
     })
 
   }
 
-
-
+  refreshModal() {
+    location.reload();
+  }
 
 }
