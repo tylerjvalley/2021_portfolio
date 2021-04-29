@@ -1,0 +1,16 @@
+@import '../../../styles.scss';
+
+.projects {
+    .tech {
+        border: 1px solid $teal;
+        border-radius: 8px;
+
+        .framework {
+            height: 100%;
+            :hover {
+                color: $cyan;
+                text-decoration: underline;
+            }
+        }
+    }
+}
