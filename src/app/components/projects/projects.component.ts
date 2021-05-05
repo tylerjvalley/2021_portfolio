@@ -15,9 +15,12 @@ export class ProjectsComponent implements OnInit {
   react:boolean = false;
   other:boolean = false;
 
+
+
   constructor(private readonly modal: ModalService) { }
 
   ngOnInit(): void {
+    
   }
 
   showModal(type:string): void {   

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'modal',
@@ -18,25 +19,40 @@ export class ModalComponent implements OnInit {
   descriptionTitle:string;
   description:string;
 
+
   constructor(
     modal: ModalService,
     private sanitizer: DomSanitizer
     ) {
-    this.title = modal.modalType;
-    this.information = modal.modalInfo;
-    this.repo = modal.modalRepo;
-    this.link = modal.modalLink;
     this.gif = sanitizer.bypassSecurityTrustHtml(modal.modalGif);
-    this.descriptionTitle = modal.modalTitle;
-    this.description = modal.modalDescription;
+    setInterval(() => {
+      this.title = modal.modalType;
+      this.information = modal.modalInfo;
+      this.repo = modal.modalRepo;
+      this.link = modal.modalLink;
+      this.descriptionTitle = modal.modalTitle;
+      this.description = modal.modalDescription;
+    }, 1);
+    
+
+    setInterval(() => {
+      this.gif = sanitizer.bypassSecurityTrustHtml(modal.modalGif);
+    }, 7000)
+    
+    
+    
    }
 
   ngOnInit(): void {
     
+    this.showModal();
+
+  }
+
+  showModal() {
     const projectModal:HTMLElement = document.getElementById('projectModal');
     const descriptionModal:HTMLElement = document.getElementById('descriptionModal');
     const myInput = document.getElementById('myInput');
-
     
     if (this.descriptionModal) {
       descriptionModal.addEventListener('shown.bs.modal', function(e) {
@@ -47,11 +63,7 @@ export class ModalComponent implements OnInit {
         myInput.focus();     
       })
     }
-
   }
 
-  refreshModal() {
-    location.reload();
-  }
 
 }

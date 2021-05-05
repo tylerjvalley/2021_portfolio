@@ -1,4 +1,4 @@
-<div class="modal" tabindex="-1" id="projectModal">
+<div onload="showModal()" class="modal" tabindex="-1" id="projectModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -12,7 +12,7 @@
           <a href=""><button type="button" class="btn btn-light">More Info</button></a>
           <a href="{{link}}" target="_blank"><button type="button" class="btn btn-success">Link to Project</button></a>
           <a href="{{repo}}" target="_blank"><button type="button" class="btn btn-primary">Repository</button></a>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="refreshModal()">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
           <p>{{description}}</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary m-auto" data-dismiss="modal" (click)="refreshModal()">Close</button>
+          <button type="button" class="btn btn-primary m-auto" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
