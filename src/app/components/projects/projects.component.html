@@ -1,40 +1,47 @@
 <div class="projects text-center py-5">
     <h1 class="text-cyan">My Projects</h1>
-    <p class="text-light-grey my-5">Here are some examples of projects that I've worked on through work, and through personal projects that I've done on my own.</p>
+    <p class="text-light-grey my-5">Here are some examples of projects that I've worked on with a team, freelancing, and through personal projects that I've done on my own.</p>
 
     <div class="container my-5 tech py-3">
         <div class="row">
-            <div class="col-4 framework">
+            <div class="col-4 framework" (click)="showSection('Angular')">
                 <h4 class="text-light-grey">Angular</h4>
             </div>
-            <div class="col-4 framework">
+            <div class="col-4 framework" (click)="showSection('React')">
                 <h4 class="text-light-grey">React</h4>
             </div>
-            <div class="col-4 framework">
+            <div class="col-4 framework" (click)="showSection('Other')">
                 <h4 class="text-light-grey">Other</h4>
             </div>
         </div>
     </div>
 
-    <div class="container my-5 projects-section angular">
+    <div class="container my-5 projects-section angular" *ngIf="angular">
+      <h4 class="text-cyan my-5">Angular Projects</h4>
         <div class="row">
             <div class="col-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="assets/img/home/earnbet.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="text-cyan">EarnBet</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">Angular | Bootstrap | Web3 | NodeJS | MySQL</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('EarnbetDescription')">See Description</a>
+                      <a href="#" class="btn btn-outline-success">Link to Project</a>
+                      <a href="#" class="btn btn-outline-primary">Repository</a>
                     </div>
                   </div>
             </div>
             <div class="col-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="assets/img/home/stacker.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="text-cyan">Stacker Ventures</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">Angular | Bootstrap | Web3 | NodeJS | MySQL</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('StackerDescription')">See Description</a>
+                      <a href="#" class="btn btn-outline-success">Link to Project</a>
+                      <a href="#" class="btn btn-outline-primary">Repository</a>
                     </div>
                   </div>
             </div>
@@ -42,23 +49,107 @@
                 <div class="card" style="width: 18rem;">
                     <img src="assets/img/home/bethehouse.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">BeTheHouse</h5>
-                      <p class="card-text"></p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                      <a href="" class=""></a>
+                      <h5 class="text-cyan">BeTheHouse</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">Angular | Bootstrap | Web3 | NodeJS | MySQL</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('BTHDescription')">See Description</a>
+                      <a href="#" class="btn btn-outline-success">Link to Project</a>
+                      <a href="#" class="btn btn-outline-primary">Repository</a>
                     </div>
                   </div>
             </div>
             <div class="col-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="assets/img/home/eosbet.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="text-cyan">EOSBet</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">Angular | Bootstrap | Web3 | NodeJS | MySQL</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('EOSDescription')">See Description</a>
+                      <a href="#" class="btn btn-outline-success">Link to Project</a>
+                      <a href="#" class="btn btn-outline-primary">Repository</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 projects-section angular" *ngIf="react">
+      <h4 class="text-cyan my-5">React Projects</h4>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/home/reddit.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-cyan">France is Bacon</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">React | Redux | Bootstrap | NodeJS </p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('FranceDescription')">See Description</a>
+                      <a href="https://tylerjvalley.github.io/france-is-bacon/" class="btn btn-outline-success">Link to Project</a>
+                      <a href="https://github.com/tylerjvalley/france-is-bacon" class="btn btn-outline-primary">Repository</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/home/bookfinder.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-cyan">Book Finder</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">React | Bootstrap | NodeJS | MySQL | MongoDB </p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('BookDescription')">See Description</a>
+                      <a href="https://valley-book-finder.herokuapp.com/" class="btn btn-outline-success">Link to Project</a>
+                      <a href="https://github.com/tylerjvalley/book-finder" class="btn btn-outline-primary">Repository</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/home/market.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-cyan">A Southern Market</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">React | Redux | MySQL | NodeJS | MongoDB</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('MarketDescription')">See Description</a>
+                      <a href="https://a-southern-market.herokuapp.com/" class="btn btn-outline-success">Link to Project</a>
+                      <a href="https://github.com/tylerjvalley/a-southern-market" class="btn btn-outline-primary">Repository</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 projects-section angular" *ngIf="other">
+      <h4 class="text-cyan my-5">Other Projects</h4>
+        <div class="row">
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/home/confetti.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-cyan">Make it Rain Coins</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">JavaScript | CSS | HTML</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('ConfettiDescription')">See Description</a>
+                      <a href="https://make-it-rain-coins.herokuapp.com/" class="btn btn-outline-success">Link to Project</a>
+                      <a href="https://github.com/tylerjvalley/makeitrain" class="btn btn-outline-primary">Repository</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/img/home/twitter.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-cyan">Twitter API</h5>
+                      <h6 class="text-white">Built With:</h6>
+                      <p class="text-white">JavaScript | CSS | HTML | Twitter API</p>
+                      <a class="btn btn-outline-light" data-toggle="modal" data-target="#descriptionModal" (click)="showModal('TwitterDescription')">See Description</a>
+                      <a href="https://twitter-earnbet.herokuapp.com/" class="btn btn-outline-success">Link to Project</a>
+                      <a href="#" class="btn btn-outline-primary">Repository</a>
                     </div>
                   </div>
             </div>
         </div>
     </div>
 </div>
+
+<modal *ngIf="modalActivated"></modal>

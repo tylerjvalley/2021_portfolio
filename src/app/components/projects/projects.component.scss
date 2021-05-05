@@ -13,4 +13,18 @@
             }
         }
     }
+
+    .projects-section {
+        .card {
+            background-color: $dark-grey;
+            margin: auto;
+            a {
+                margin: 5px;
+            }
+            img {
+                height: 70%;
+                width: 100%;
+            }
+        }
+    }
 }

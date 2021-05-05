@@ -14,6 +14,9 @@ export class ModalComponent implements OnInit {
   repo:string;
   link:string;
   gif:SafeHtml;
+  descriptionModal:Boolean = false;
+  descriptionTitle:string;
+  description:string;
 
   constructor(
     modal: ModalService,
@@ -24,16 +27,26 @@ export class ModalComponent implements OnInit {
     this.repo = modal.modalRepo;
     this.link = modal.modalLink;
     this.gif = sanitizer.bypassSecurityTrustHtml(modal.modalGif);
+    this.descriptionTitle = modal.modalTitle;
+    this.description = modal.modalDescription;
    }
 
   ngOnInit(): void {
     
     const projectModal:HTMLElement = document.getElementById('projectModal');
+    const descriptionModal:HTMLElement = document.getElementById('descriptionModal');
     const myInput = document.getElementById('myInput');
 
-    projectModal.addEventListener('shown.bs.modal', function (e) {
-      myInput.focus();     
-    })
+    
+    if (this.descriptionModal) {
+      descriptionModal.addEventListener('shown.bs.modal', function(e) {
+        myInput.focus();
+      })
+    } else {
+      projectModal.addEventListener('shown.bs.modal', function (e) {
+        myInput.focus();     
+      })
+    }
 
   }
 
