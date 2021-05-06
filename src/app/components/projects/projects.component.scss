@@ -1,6 +1,11 @@
 @import '../../../styles.scss';
 
 .projects {
+    .my-projects {
+        @media (max-width: 767px) {
+            font-size: 48px;
+        }
+    }
     .tech {
         border: 1px solid $teal;
         border-radius: 8px;
