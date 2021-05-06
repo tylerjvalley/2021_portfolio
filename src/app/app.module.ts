@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -17,7 +16,6 @@ import { FooterComponent } from './components/footer/footer.component';
     NavigationComponent,
     HomeComponent,
     ProjectsComponent,
-    AboutComponent,
     ContactComponent,
     ModalComponent,
     FooterComponent
