@@ -1,5 +1,10 @@
 .contact {
-
+    @media (max-width: 500px) {
+        .email-phone {
+            text-align: left !important;
+        }
+        
+    }
     h3 {
         @media (max-width: 767px) {
             font-size: 18px;
